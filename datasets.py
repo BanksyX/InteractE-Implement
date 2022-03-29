@@ -1,4 +1,5 @@
 from cProfile import label
+from os import stat
 from select import select
 
 from matplotlib.pyplot import tripcolor
@@ -48,8 +49,10 @@ class TrainDataset(Dataset):
     def collate_fn(data):
         pass
     
+    @staticmethod
     def get_neg_ent(self, triple, label):
         pass
+    
 
     def get_label(self, label):
         if self.strategy == 'one2n':
